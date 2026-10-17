@@ -1,0 +1,41 @@
+
+backend:
+  name: turbo-github
+  turbo_site_id: REPLACE_WITH_YOUR_SITE_ID
+  branch: main
+
+site_url: https://preetam-ux.github.io/ThePreeFiles
+display_url: https://preetam-ux.github.io/ThePreeFiles
+
+media_folder: "uploads"
+public_folder: "/ThePreeFiles/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "posts"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+
+      - label: "Short Description"
+        name: "description"
+        widget: "text"
+
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"
+        required: false
+
+      - label: "Article"
+        name: "body"
+        widget: "markdown"
